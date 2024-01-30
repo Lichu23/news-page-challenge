@@ -6,7 +6,7 @@ const NewsCard = () => {
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?q=Apple&from=2024-01-20&sortBy=popularity&apiKey=3885ec8465ec42a49a0ba896b72769ac"
+      "https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=96588dada3d8bcea3944103185e9dfa6"
     )
       .then((res) => res.json())
       .then((res) => {
@@ -37,7 +37,7 @@ const NewsCard = () => {
           </h3>
           <div className="flex justify-center">
             <img
-              src={newsItem.urlToImage}
+              src={newsItem.image}
               alt="Image"
               className="w-full h-52 object-cover rounded-2xl"
             />
